@@ -1,0 +1,59 @@
+<select class="form-select" [(ngModel)]="category">
+    <option value="brand">Search by Brand</option>
+    <option value="name">Search by Name</option>
+    <option value="color">Search by Color</option>
+  </select>
+
+  <input class="form-control" [(ngModel)]="query" (keyup)="search()" autocomplete="off" type="search"/>
+  <p>{{filteredSpirits.length}} entries found out {{spirits.length}}</p>
+
+
+
+
+
+<table class="table table-warning table-hover">
+    <tr>
+        <th>
+            Brand
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Colour
+        </th>
+        <th>
+            Years Aged
+        </th>
+        <th>
+            Alcohol Content
+        </th>
+    </tr>
+
+    <tr *ngFor="let s of filteredSpirits">
+        <td>
+            {{s.brand}}
+        </td>
+        <td>
+            {{s.name}}
+        </td>
+        <td>
+            {{s.type}}
+        </td>
+        <td>
+            {{s.color}}
+        </td>
+        <td>
+            {{s.yearsAged}}
+        </td>
+        <td>
+            {{s.alcoholContent}}
+        </td>
+
+    </tr>
+
+
+</table>

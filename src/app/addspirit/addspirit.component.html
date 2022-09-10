@@ -1,0 +1,45 @@
+<html>
+  
+<header>
+    <h1 class="header">Add a Spirit</h1>
+    <p class="description">Add your liquor of choice into the database using the fields below!</p>
+  
+
+</header>    
+
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputBrand" class="form-label">Spirit Brand</label>
+          <input type="text" [(ngModel)]="spiritToBeAdded.brand" class="form-control" id="brand" name="brand" aria-describedby="emailHelp">
+          <div id="emailhelp" class="form-text">Ex: Captain Morgan, Bacardi, etc.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Spirit Name</label>
+            <input type="text" [(ngModel)]="spiritToBeAdded.name" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Ex: Private Stock, Original, Silver, etc.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputType" class="form-label">Spirit Type</label>
+            <input type="text" [(ngModel)]="spiritToBeAdded.type" class="form-control" id="type" name="type" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Ex: Rum, Whiskey, etc.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputColor" class="form-label">Colour</label>
+            <input type="text" [(ngModel)]="spiritToBeAdded.color" class="form-control" id="color" name="color" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Ex: Light, Dark, etc.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputYears" class="form-label">Years Aged</label>
+            <input type="number" [(ngModel)]="spiritToBeAdded.yearsAged" class="form-control" id="yearsAged" name="yearsAged" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Ex: 1, 2, 3, etc.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputAlcoholContent" class="form-label">Alcohol Content</label>
+            <input type="number" [(ngModel)]="spiritToBeAdded.alcoholContent" class="form-control" id="alcoholContent" name="alcoholContent" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Ex: 35%</div>
+          </div>
+        <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+          <p>{{displayText}}</p>
+      </form>
+  
+</html>
